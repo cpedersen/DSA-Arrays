@@ -7,10 +7,6 @@ Data Structures and Algorithms course material.
 
 See array.js.
 
-## Assignments 2 to 4
+## Assignments 2 to 12
 
-See main.js.
-
-## Assignments 5 to 12
-
-See separate files.
+See array.js and main.js.
