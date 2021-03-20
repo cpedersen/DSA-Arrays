@@ -128,7 +128,7 @@ class Array {
     return newArray;
   }
 
-  remove(string, chars) {
+  removeChars(string, chars) {
     let newString = "";
     for (let i = 0; i < string.length; i++) {
       let match = false;

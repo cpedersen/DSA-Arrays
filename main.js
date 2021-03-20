@@ -142,7 +142,7 @@ function main() {
   const prob9_chars = "aeiou";
   console.log("String: ", prob9_string);
   console.log("Chars to remove: ", prob9_chars);
-  console.log(arr.remove(prob9_string, prob9_chars));
+  console.log(arr.removeChars(prob9_string, prob9_chars));
 
   // -------------------------------------------------------
   // Assignment #10: Products
