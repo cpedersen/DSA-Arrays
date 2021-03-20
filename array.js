@@ -113,7 +113,7 @@ class Array {
     return maxSum;
   }
 
-  mergeArray(arr1, arr2) {
+  mergeArrays(arr1, arr2) {
     let newArray = [...arr1];
     arr2.map((item) => {
       let i = 0;

@@ -132,7 +132,7 @@ function main() {
   const prob8_arr2 = [2, 3, 5, 8, 9, 10];
   console.log("Array 1: ", prob8_arr1);
   console.log("Array 2: ", prob8_arr2);
-  console.log(arr.mergeArray(prob8_arr1, prob8_arr2));
+  console.log(arr.mergeArrays(prob8_arr1, prob8_arr2));
 
   // -------------------------------------------------------
   // Assignment #9: Remove characters
