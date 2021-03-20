@@ -92,12 +92,12 @@ function main() {
   // its empty spaces with a %20. Your algorithm can only make
   // 1 pass through the string.
   console.log("-------------------- Assignment #5 --------------------");
-  const input1 = "tauhida parveen";
-  const input2 = "www.thinkful.com /tauh ida parv een";
-  console.log("Input: ", input1);
-  console.log(arr.URLify(input1));
-  console.log("Input: ", input2);
-  console.log(arr.URLify(input2));
+  const prob5_input1 = "tauhida parveen";
+  const prob5_input2 = "www.thinkful.com /tauh ida parv een";
+  console.log("Input: ", prob5_input1);
+  console.log(arr.URLify(prob5_input1));
+  console.log("Input: ", prob5_input2);
+  console.log(arr.URLify(prob5_input2));
 
   // -------------------------------------------------------
   // Assignment #6: Filtering an array.
@@ -106,9 +106,9 @@ function main() {
   // all numbers less than 5 from the array. DO NOT use Array's built-in
   // .filter() method here; write the algorithm from scratch.
   console.log("-------------------- Assignment #6 --------------------");
-  const testArray = [0, 1, 2, 3, 4, 5, 6, 20, 30, 50, 60];
-  console.log("Input: ", testArray);
-  console.log(arr.filterArray(testArray));
+  const prob6_arr = [0, 1, 2, 3, 4, 5, 6, 20, 30, 50, 60];
+  console.log("Input: ", prob6_arr);
+  console.log(arr.filterArray(prob6_arr));
 
   // -------------------------------------------------------
   // Assignment #7: Max sum in the array
@@ -117,34 +117,79 @@ function main() {
   // Write an algorithm which will find the largest sum in a continuous
   // sequence.
   console.log("-------------------- Assignment #7 --------------------");
-  const input = [4, 6, -3, 5, -2, 1];
-  console.log("Input: ", input);
-  console.log(arr.maxSum(input));
+  const prob7_arr = [4, 6, -3, 5, -2, 1];
+  console.log("Input: ", prob7_arr);
+  console.log(arr.maxSum(prob7_arr));
 
   // -------------------------------------------------------
   // Assignment #8: Merge arrays
   // -------------------------------------------------------
+  // Imagine you have 2 arrays which have already been sorted.
+  // Write an algorithm to merge the 2 arrays into a single array, which
+  // should also be sorted.
   console.log("-------------------- Assignment #8 --------------------");
+  const prob8_arr1 = [1, 3, 6, 8, 11];
+  const prob8_arr2 = [2, 3, 5, 8, 9, 10];
+  console.log("Array 1: ", prob8_arr1);
+  console.log("Array 2: ", prob8_arr2);
+  console.log(arr.mergeArray(prob8_arr1, prob8_arr2));
 
   // -------------------------------------------------------
   // Assignment #9: Remove characters
   // -------------------------------------------------------
   console.log("-------------------- Assignment #9 --------------------");
+  const prob9_string = "Battle of the Vowels: Hawaii vs. Grozny";
+  const prob9_chars = "aeiou";
+  console.log("String: ", prob9_string);
+  console.log("Chars to remove: ", prob9_chars);
+  console.log(arr.remove(prob9_string, prob9_chars));
 
   // -------------------------------------------------------
   // Assignment #10: Products
   // -------------------------------------------------------
+  // Given an array of numbers, write an algorithm that outputs an
+  // array where each index is the product of all the numbers in the
+  // input array except for the number at each current index.
   console.log("-------------------- Assignment #10 --------------------");
+  const prob10_arr = [1, 3, 9, 4];
+  console.log("Input: ", prob10_arr);
+  console.log(arr.products(prob10_arr));
 
   // -------------------------------------------------------
   // Assignment #11: 2D array
   // -------------------------------------------------------
+  // Write an algorithm which searches through a 2D array, and whenever
+  // it finds a 0 should set the entire row and column to 0.
   console.log("-------------------- Assignment #11 --------------------");
+  const prob11_input = [
+    [1, 0, 1, 1, 0],
+    [0, 1, 1, 1, 0],
+    [1, 1, 1, 1, 1],
+    [1, 0, 1, 1, 1],
+    [1, 1, 1, 1, 1],
+  ];
+  console.log("Input: ", prob11_input);
+  console.log(arr.search2DArr(prob11_input));
 
   // -------------------------------------------------------
   // Assignment #12: String Rotation
   // -------------------------------------------------------
+  // Given 2 strings, str1 and str2, write a program that checks if str2
+  // is a rotation of str1.
   console.log("-------------------- Assignment #12 --------------------");
+  const prob12_input1_a = "amazon";
+  const prob12_input2_a = "azonma"; // Expect False
+
+  const prob12_input1_b = "amazon";
+  const prob12_input2_b = "azonam"; // Expect True
+
+  console.log("Input 1: ", prob12_input1_a);
+  console.log("Input 2: ", prob12_input2_a);
+  console.log(arr.stringRotate(prob12_input1_a, prob12_input2_a));
+
+  console.log("Input 1: ", prob12_input1_b);
+  console.log("Input 2: ", prob12_input2_b);
+  console.log(arr.stringRotate(prob12_input1_b, prob12_input2_b));
 }
 
 main();

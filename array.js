@@ -3,7 +3,7 @@
 // memory allocation works.
 // -------------------------------------------------------
 
-const Memory = require("./memory");
+const Memory = require("./memory.js");
 const memory = new Memory();
 
 class Array {
@@ -111,6 +111,74 @@ class Array {
       }
     }
     return maxSum;
+  }
+
+  mergeArray(arr1, arr2) {
+    let newArray = [...arr1];
+    arr2.map((item) => {
+      let i = 0;
+      while (i < newArray.length) {
+        if (item <= newArray[i]) {
+          newArray.splice(i, 0, item);
+          break;
+        }
+        i++;
+      }
+    });
+    return newArray;
+  }
+
+  remove(string, chars) {
+    let newString = "";
+    for (let i = 0; i < string.length; i++) {
+      let match = false;
+      for (let j = 0; j < chars.length; j++) {
+        if (string[i] === chars[j]) {
+          match = true;
+        }
+      }
+      if (!match) {
+        newString += string[i];
+      }
+    }
+    return newString;
+  }
+
+  products(arr) {
+    let productArray = [];
+    for (let i = 0; i < arr.length; i++) {
+      let res = 1;
+      for (let j = 0; j < arr.length; j++) {
+        if (i != j) {
+          res *= arr[j];
+        }
+      }
+      productArray.push(res);
+    }
+    return productArray;
+  }
+
+  search2DArr(arr) {
+    const originalArray = JSON.parse(JSON.stringify(arr));
+    let newArray = arr;
+    originalArray.map((row, rowIndex) => {
+      row.map((col, colIndex) => {
+        if (col === 0) {
+          newArray[rowIndex].forEach((num, i) => (newArray[rowIndex][i] = 0));
+          newArray.forEach((newRow) => (newRow[colIndex] = 0));
+        }
+      });
+    });
+    return newArray;
+  }
+
+  stringRotate(str1, str2) {
+    let combineString = str1 + str1;
+    if (str1.length != str2.length) return false;
+    if (combineString.indexOf(str2) === -1) {
+      return false;
+    }
+    return true;
   }
 }
 
