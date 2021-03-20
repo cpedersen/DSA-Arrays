@@ -72,6 +72,46 @@ class Array {
     memory.free(oldPtr);
     this._capacity = size;
   }
+
+  URLify(string) {
+    if (!string) {
+      throw new Error("No string");
+    }
+    let newString = "";
+    for (let i = 0; i < string.length; i++) {
+      if (string[i] === " ") {
+        newString += "%20";
+      } else {
+        newString += string[i];
+      }
+    }
+    return newString;
+  }
+
+  filterArray(arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] >= 5) {
+        newArr.push(arr[i]);
+      }
+    }
+    return newArr;
+  }
+
+  maxSum(arr) {
+    let currentSum = 0;
+    let maxSum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      currentSum = arr[i];
+      for (let j = i + 1; j < arr.length; j++) {
+        currentSum += arr[j];
+        if (currentSum > maxSum) {
+          maxSum = currentSum;
+        }
+      }
+    }
+    return maxSum;
+  }
 }
 
 Array.SIZE_RATIO = 3;
