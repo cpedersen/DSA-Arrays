@@ -1,4 +1,4 @@
-const Array = require("./Array.js");
+const Array = require("./array.js");
 const Memory = require("./memory.js");
 
 function main() {
