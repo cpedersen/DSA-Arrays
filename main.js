@@ -1,4 +1,5 @@
 const Array = require("./Array.js");
+const Memory = require("./memory.js");
 
 function main() {
   Array.SIZE_RATIO = 3;
@@ -93,6 +94,7 @@ function main() {
   // 1 pass through the string.
   console.log("-------------------- Assignment #5 --------------------");
   const prob5_input1 = "tauhida parveen";
+  //const prob5_input1 = ["tauhida parveen"];
   const prob5_input2 = "www.thinkful.com /tauh ida parv een";
   console.log("Input: ", prob5_input1);
   console.log(arr.URLify(prob5_input1));

@@ -74,8 +74,8 @@ class Array {
   }
 
   URLify(string) {
-    if (!string) {
-      throw new Error("No string");
+    if (typeof string !== "string") {
+      throw new Error("Not a string");
     }
     let newString = "";
     for (let i = 0; i < string.length; i++) {
